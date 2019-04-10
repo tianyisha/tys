@@ -46,6 +46,10 @@
         ol li:nth-child(1) {
             display: block;
         }
+        
+        .active {
+            background: orange;
+        }
     </style>
 </head>
 
@@ -63,5 +67,17 @@
         <li>4444</li>
     </ol>
 </body>
+<script>
+    let ulis = [...document.querySelectorAll('ul li')];
+    let olis = [...document.querySelectorAll('ol li')];
+    ulis.forEach((item, index) => {
+        item.onclick = function() {
+            for (var j = 0; j < ulis.length; j++) {
+                ulis[j].classList.remove('active')
+            }
+            ulis[index].classList.add('active')
+        }
+    })
+</script>
 
 </html>
