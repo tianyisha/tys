@@ -73,9 +73,11 @@
     ulis.forEach((item, index) => {
         item.onclick = function() {
             for (var j = 0; j < ulis.length; j++) {
-                ulis[j].classList.remove('active')
+                ulis[j].classList.remove('active');
+                olis[j].style.display = 'none';
             }
-            ulis[index].classList.add('active')
+            ulis[index].classList.add('active');
+            olis[index].style.display = 'block';
         }
     })
 </script>
